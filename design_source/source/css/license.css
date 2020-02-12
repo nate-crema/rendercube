@@ -1,0 +1,359 @@
+html {
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    height: 560;
+    overflow: scroll;
+    overflow-x: hidden;
+    min-width: 1270px;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+}
+
+/*animate.css*/
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn_delay {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_delay {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn_delay {
+  -webkit-animation-name: fadeIn_delay;
+  animation-name: fadeIn_delay;
+}
+
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(150%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(150%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+  }
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+  }
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+.fadein_1s {
+    animation-duration: 1s;
+}
+.fadein_1_3s {
+    animation-duration: 1.3s;
+}
+.fadein_1_8s {
+    animation-duration: 1.8s;
+}
+.fadein_2s {
+    animation-duration: 2s;
+}
+.fadein_2_4s {
+    animation-duration: 2.4s;
+}
+
+
+/* button design */
+
+.button_black {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+.button_white {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+.button {
+  cursor: pointer;
+}
+
+
+.btn_check_ext {
+    width: 400px;
+    height: 110px;
+    float: left;
+}
+
+.btn_reserv_user {
+    width: 400px;
+    height: 110px;
+    float: right;
+}
+
+
+
+.contents-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100000;
+}
+
+
+.contents-wrap .step_a {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 80%;
+}
+.contents-wrap .title {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    font-size: 40px;
+    font-weight: 500;
+}
+.contents-wrap .title .bar_under_title {
+    width: 30px;
+    height: 3px;
+    background-color:black;
+    position: absolute;
+    top: 90px;
+}
+.contents-wrap .title .title_text_under_a, .title_text_under_b {
+  font-size: 17px;
+  color: rgb(150, 150, 150);
+  position: absolute;
+  top: 90px;
+}
+.contents-wrap .title .title_text_under_b {
+  display: none;
+}
+.contents-wrap .license_list {
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    top: 300px;
+}
+.contents-wrap .license_list .license_cover {
+    width: 85%;
+    height: 550px;
+    margin: auto;
+}
+.contents-wrap .license_list .license_cover .license {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    position: absolute;
+}
+.contents-wrap .license_list .license_cover .license_mini {
+    height: 220px;
+}
+.contents-wrap .license_list .license_cover .license_a {
+    
+}
+.contents-wrap .license_list .license_cover .license_b {
+    top: 280px;
+}
+.contents-wrap .license_list .license_cover .license_c {
+    left: 600px;
+}
+.contents-wrap .license_list .license_cover .license_d {
+    left: 1100px;
+}
+.contents-wrap .license_list .license_cover .license_title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 22px;
+}
+.contents-wrap .license_list .license_cover .license_title_big {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 22px;
+}
+.contents-wrap .license_list .license_cover .bar_license_title {
+    width: 170px;
+    height: 2px;
+    border-radius: 2em;
+    background-color: black;
+    float: right;
+}
+.contents-wrap .license_list .license_cover .license_fee {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 70px;
+}

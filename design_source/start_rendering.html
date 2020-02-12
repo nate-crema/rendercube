@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="html">
+    <head>
+        <meta charset="utf-8">
+        <title><%= title%></title>
+        <link rel="stylesheet" href="./source/css/start_rendering.css">
+        <link rel="stylesheet" href="./source/css/movement_animation_important.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="source/js/start_rendering.js"></script>
+        <link rel="icon" type="image/png" href="./source/img/favicon.png"/>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <ul class="navbar">
+                <li><a href="/login">Login</a></li>
+                <li>|</li>
+                <li class="reg"><a href="/register">Register</a></li>
+                <li class="reg_renderfarm"><a href="/reg_renderfarm">Register Renderfarm</a></li>
+                <li class=""><a href="">Start Rendering</a></li>
+                <li class=""><a href="">About Rendercube</a></li>
+                <a href="/"><div class="logo"></div></a>
+            </ul>
+            <div class="title">
+                <p class="title_text fadeInDown fadein_1_3s">Start Rendering</p>
+                <div class="bar bar_under_title fadeInLeft fadein_1s"></div>
+                <p class="title_text_under_a fadeIn fadein_2s">Check your Information</p>
+                <p class="title_text_under_b">Input Rendering File Information</p>
+            </div>
+            <div class="step_bar_cover fadeInRight fadein_1s">
+                <div class="step_info_a">
+                    <p class="text">step</p>
+                    <div class="circle_step">
+                        <p class="step_num">1</p>
+                    </div>
+                </div>
+                <div class="step_info_b">
+                    <p class="text">step</p>
+                    <div class="circle_step">
+                        <p class="step_num">2</p>
+                    </div>
+                </div>
+                <div class="step_bar"></div>
+                <div class="step_bar_after"></div>
+            </div>
+            <div class="step_a">
+                <div class="check_info fadeIn_delay fadein_1_3s">
+                    <div class="display">
+                        <p class="info_title_id info_title">Renderer id</p>
+                        <p class="id_req_body req_info" id="id_body_display">user_id</p>
+                        <p class="info_title_license info_title">Renderer License</p>
+                        <p class="license_req_body req_info" id="license_body_display">user_license</p>
+                    </div>
+                    <div class="divide">
+                        <div class="bar bar_divide divide_a"></div>
+                        <p class="bar_middle_text">or</p>
+                        <div class="bar bar_divide divide_b"></div>
+                    </div>
+                    <div class="login_retry">
+                        <div class="button button_black button_relogin" onclick="location.href='/login'">
+                            <p class="subtitle">Change Account</p>
+                            <div class="bar bar_under_subtitle"></div>
+                            <p class="title">Login other Account</p>
+                            <img src="./source/img/arrow_point_white.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button button_next button_white fadeInRight fadein_2s" id="button_next" onclick="first_step_next()">
+                <p class="title" id="button_step_title">Next</p>
+                <img src="source/img/arrow_point_black.png"/>
+            </div>
+            <div class="step_b">
+                <form class="file_info_form">
+                    <p class="input_title_a input_title">Upload Rendering File (Zip Only)</p>
+                    <input type="file" class="input_file_zip input" id="input_file_zip" name="input_file_zip"/>
+                    <p class="input_title_b input_title">Rendering Composition Name</p>
+                    <input type="text" class="input_comp input" id="input_comp" name="input_comp"/>
+                    <p class="input_title_c input_title">Extension Select</p>
+                    <select class="sel_opt_ext input">
+                        <option class="mp4">.MP4</option>
+                        <option class="avi">.AVI</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <!--footer -->
+    </body>
+</html>

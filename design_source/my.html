@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="html">
+    <head>
+        <meta charset="utf-8">
+        <title><%= title%></title>
+        <link rel="stylesheet" href="./source/css/my.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="source/js/my.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="icon" type="image/png" href="./source/img/favicon.png"/>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <ul class="navbar">
+                <li><a href="/my">MY</a></li>
+                <li>|</li>
+                <li class="reg"><a href="/logout">Logout</a></li>
+                <li class="reg_renderfarm"><a href="/reg_renderfarm">Register Renderfarm</a></li>
+                <li class=""><a href="/start_rendering">Start Rendering</a></li>
+                <li class=""><a href="/about">About Rendercube</a></li>
+                <a href="/"><div class="logo"></ul></a>
+            </ul>
+            <div class="title">
+                <p class="title_text fadeInDown fadein_1_3s">My Renderfarm</p>
+                <div class="bar bar_under_title fadeInLeft fadein_1s"></div>
+            </div>
+            <div class="license_info">
+                <p class="license_info_subtitle fadeInDown fadein_1_5s">Rendering License: </p>
+                <p class="license_info_contents contents-license fadeInRight fadein_2_4s">lic_test_text</p>
+                <p class="middle_bar contents-license fadeInLeft fadein_1_3s">|</p>
+                <p class="render_remain contents-license fadeInRight fadein_2_4s">00 rendering remains</p>
+            </div>
+            <div class="rendering_lineup">
+                <div class="rendering_layout layout_a">
+                    <div class="data_cover">
+                        <div class="date">[YYYY-MM-DD]</div>
+                        <div class="bar_under_date"></div>
+                        <p class="comp_name">[Comp_name]</p>
+                        <div class="bar_side_comp_a"></div>
+                        <div class="bar_side_comp_b"></div>
+                        <img src="./source/img/aep_file.png" class="render_file_type" id="render_file_type"/>
+                        <img src="./source/img/arrow_point_bigangle.png" class="specific_render_file" id="specific_render_file"/>
+                        <div class="bar_up_status"></div>
+                        <p class="status_rendering">[Rendering_Status]</p>
+                        <div class="status_bar">
+                            <div class="bar_under_contents_b"></div>
+                            <div class="bar_under_contents_b_back"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer -->
+    </body>
+</html>

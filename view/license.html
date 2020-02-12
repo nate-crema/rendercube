@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><%= title%></title>
+        <link rel="stylesheet" href="../design_source/source/css/license.css">
+        <link rel="stylesheet" href="../design_source/source/css/navbar.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="../design_source/source/js/license.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="icon" type="image/png" href="./source/img/favicon.png"/>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <% include ./navbar.ejs %>
+            <div class="title">
+                <p class="title_text">Rendering Plan</p>
+                <div class="bar bar_under_title"></div>
+            </div>
+            <div class="license_list">
+                <div class="license_cover">
+                    <div class="license license_a license_mini">
+                        <p class="license_title license_title_a">Alpha / Beta test Period</p>
+                        <div class="bar bar_license_title"></div>
+                        <p class="license_fee">FREE</p>
+                    </div>
+                    <div class="license license_b license_mini">
+                        <p class="license_title license_title_b">Student / Teacher</p>
+                        <div class="bar bar_license_title"></div>
+                        <p class="license_fee">FREE</p>
+                    </div>
+                    <div class="license license_c">
+                        <p class="license_title_big license_title_c">Onetime payment</p>
+                        <div class="bar bar_license_title_long"></div>
+                        <p class="license_many">3 Plan</p>
+                    </div>
+                    <div class="license license_d">
+                        <p class="license_title_big license_title_d">Monthly payment</p>
+                        <div class="bar bar_license_title_long"></div>
+                        <p class="license_many">3 Plan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

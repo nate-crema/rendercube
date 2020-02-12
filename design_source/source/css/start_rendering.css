@@ -1,0 +1,522 @@
+html {
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    height: 560;
+    overflow: scroll;
+    overflow-x: hidden;
+    min-width: 1270px;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+}
+
+/*animate.css*/
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn_delay {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_delay {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn_delay {
+  -webkit-animation-name: fadeIn_delay;
+  animation-name: fadeIn_delay;
+}
+
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(150%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(150%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+  }
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+  }
+  50% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+.fadein_1s {
+    animation-duration: 1s;
+}
+.fadein_1_3s {
+    animation-duration: 1.3s;
+}
+.fadein_1_8s {
+    animation-duration: 1.8s;
+}
+.fadein_2s {
+    animation-duration: 2s;
+}
+.fadein_2_4s {
+    animation-duration: 2.4s;
+}
+
+
+/* button design */
+
+.button_black {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+.button_white {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+.button {
+  cursor: pointer;
+}
+
+
+.btn_check_ext {
+    width: 400px;
+    height: 110px;
+    float: left;
+}
+
+.btn_reserv_user {
+    width: 400px;
+    height: 110px;
+    float: right;
+}
+
+
+
+.contents-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100000;
+}
+
+.contents-wrap .step_a {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 80%;
+}
+.contents-wrap .title {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    font-size: 40px;
+    font-weight: 500;
+}
+.contents-wrap .title .bar_under_title {
+    width: 30px;
+    height: 3px;
+    background-color:black;
+    position: absolute;
+    top: 90px;
+}
+.contents-wrap .title .title_text_under_a, .title_text_under_b {
+  font-size: 17px;
+  color: rgb(150, 150, 150);
+  position: absolute;
+  top: 90px;
+}
+.contents-wrap .title .title_text_under_b {
+  display: none;
+}
+.contents-wrap .step_bar_cover {
+    width: 100%;
+    position: absolute;
+    top: 280px;
+    left: 500px;
+}
+.contents-wrap .step_bar_cover .step_info_a .text {
+    position: absolute;
+    left: -60px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.contents-wrap .step_bar_cover .step_info_a .circle_step {
+    position: absolute;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+.contents-wrap .step_bar_cover .step_info_a .circle_step .step_num {
+    position: absolute;
+    left: 15px;
+    top: -5px;
+}
+.contents-wrap .step_bar_cover .step_info_b {
+  position: absolute;
+  left: 1320px; 
+}
+.contents-wrap .step_bar_cover .step_info_b .text {
+  position: absolute;
+  left: -60px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.contents-wrap .step_bar_cover .step_info_b .circle_step {
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.contents-wrap .step_bar_cover .step_info_b .circle_step .step_num {
+  position: absolute;
+  left: 15px;
+  top: -5px;
+}
+.contents-wrap .step_bar_cover .step_bar {
+    position: absolute;
+    top: 30px;
+    left: 42px;
+    width: 1200px;
+    height: 1px;
+    border-radius: 2em;
+    background-color: black;
+}
+.contents-wrap .step_bar_cover .step_bar_after {
+  position: absolute;
+  top: 30px;
+  width: 1200px;
+  height: 1px;
+  border-radius: 2em;
+  background-color: black;  
+  left: 1410px;
+}
+.contents-wrap .step_a .check_info {
+    width: 1300px;
+    height: 380px;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+}
+.contents-wrap .step_a .check_info .display {
+    position: absolute;
+}
+.contents-wrap .step_a .check_info .display .info_title {
+    position: absolute;
+    font-weight: 500;
+    font-size: 35px;
+    color: rgb(62, 62, 62);
+}
+.contents-wrap .step_a .check_info .display .info_title_id {
+    width: 250px;
+    position: absolute;
+    top: 50px;
+}
+.contents-wrap .step_a .check_info .display .info_title_license {
+    width: 300px;
+    position: absolute;
+    top: 150px;
+}
+.contents-wrap .step_a .check_info .display .req_info {
+    position: absolute;
+    top: 70px;
+    left: 350px;
+    font-size: 20px;
+    color: rgb(154, 154, 154);
+}
+.contents-wrap .step_a .check_info .display .license_req_body {
+    top: 175px;
+    width: 250px;
+}
+.contents-wrap .step_a .check_info .divide {
+    position: absolute;
+    top: 80px;
+    left: 600px;  
+}
+.contents-wrap .step_a .check_info .divide .bar_divide {
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background-color: rgb(62, 62, 62);
+}
+.contents-wrap .step_a .check_info .divide .divide_a {
+    top: 0px;
+}
+.contents-wrap .step_a .check_info .divide .divide_b {
+    top: 100px;
+}
+.contents-wrap .step_a .check_info .divide .bar_middle_text {
+    position: absolute;
+    left: -8px;
+    top: 55px;
+}
+.contents-wrap .step_a .check_info .login_retry .button_relogin {
+    position: absolute;
+    top: 90px;
+    left: 700px;
+    width: 460px;
+    height: 130px;
+}
+.contents-wrap .step_a .check_info .login_retry .button_relogin .subtitle {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 10px;
+    color: rgb(154, 154, 154);
+}
+.contents-wrap .step_a .check_info .login_retry .button_relogin .bar_under_subtitle {
+    position: absolute;
+    top: 55px;
+    left: 30px;
+    width: 30px;
+    height: 1px;
+    background-color: rgb(154, 154, 154);
+}
+.contents-wrap .step_a .check_info .login_retry .button_relogin .title {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    font-size: 25px;
+}    
+.contents-wrap .step_a .check_info .login_retry .button_relogin img {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+.contents-wrap .button_next {
+    position: absolute;
+    top: 700px;
+    right: 220px;
+    width: 300px;
+    height: 70px;
+    border-color: rgb(113, 113, 113);
+}
+.contents-wrap .button_next img {
+    position: absolute;
+    top: 21px;
+    right: 20px;
+}
+.contents-wrap .button_next p {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    font-size: 32px;
+    color: rgb(113, 113, 113);
+}
+.contents-wrap .step_b {
+    font-size: 30px;
+    display: none;
+    width: 1000px;
+    height: 70%;
+    margin: auto;
+}
+.contents-wrap .step_b .file_info_form {
+    position: absolute;
+    top: 350px;
+    left: 200px;
+}
+.contents-wrap .step_b .input_title {
+    position: absolute;
+    width: 600px;
+    top: 35px;
+}
+.contents-wrap .step_b .input_title_b {
+  top: 150px;
+}
+.contents-wrap .step_b .input_title_c {
+  top: 265px;
+}
+.contents-wrap .step_b .input {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    top: 35px;
+    left: 600px;
+}
+.contents-wrap .step_b .input_file_zip {
+    top: 75px;
+}
+.contents-wrap .step_b .input_comp {
+    top: 200px;
+}
+.contents-wrap .step_b .input_filename {
+  
+    top: 160px;
+}
+.contents-wrap .step_b .sel_opt_ext {
+    top: 295px;
+}

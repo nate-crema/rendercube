@@ -1,0 +1,309 @@
+html {
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    height: 560;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+}
+input {
+    color: white;
+}
+
+/*Animate.css*/
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  60% {
+      opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  60% {
+      opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  30% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  30% {
+      opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+.fadein_0_5s {
+    animation-duration: .5s;
+}
+.fadein_1s {
+    animation-duration: 1s;
+}
+.fadein_2s {
+    animation-duration: 2s;
+}
+
+
+
+.contents-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.contents-wrap .navbar {
+    width: 100%;
+    height: 300px;
+    list-style: none;
+    float: right;
+    margin-top: 50px;
+    margin-right: 30px;
+    position: fixed;
+    padding: 0;
+    color: black;
+}
+.contents-wrap .navbar li {
+    float: right;
+    margin-right: 50px;
+}
+.contents-wrap .navbar li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 300;
+}
+.contents-wrap .navbar .logo {
+    float: left;
+    width: 160px;
+    height: 74px;
+    margin-left: 50px;
+    margin-top: -20px;
+    background-size: cover;
+    background-image: url('../img/logo_black.png');
+}
+.contents-wrap .login_cover {
+    width: 1100px;
+    height: 100%;
+    margin: auto;
+    color: white;
+}
+.contents-wrap .login_cover .login_bg {
+    width: 1100px;
+    height: 500px;
+    border: 1px solid black;
+    position: absolute;
+    top: 200px;
+    background-color: rgb(46, 46, 46);
+}
+.contents-wrap .login_cover .title_area {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    font-size: 35px;
+    font-weight: 500;
+}
+.contents-wrap .login_cover .title_area .bar_under_title {
+    width: 60px;
+    height: 1.8px;
+    background-color: #b8b8b8;
+    position: absolute;
+    top: 90px;
+    left: 3px;
+}
+.contents-wrap .login_cover .login_form .login_form_tag {
+    position: absolute;
+    top: 125px;
+    left: 70px;
+    font-size: 28px;
+}
+.contents-wrap .login_cover .login_form .login_form_tag .subtitle {
+    font-weight: 300;
+}
+.contents-wrap .login_cover .login_form .login_form_tag .subtitle .bar_right_text {
+    width: 1px;
+    height: 23px;
+    background-color: #b8b8b8;
+    position: absolute;
+    top: 34px;
+    left: 220px;
+}
+.contents-wrap .login_cover .login_form .login_info {
+    font-weight: 300;
+    font-size: 23px;
+}
+.contents-wrap .login_cover .login_form .login_info .notice {
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+.contents-wrap .login_cover .login_form .login_info .pw {
+    top: 160px;
+}
+.contents-wrap .login_cover .login_form .login_info .name {
+    top: 220px;
+}
+.contents-wrap .login_cover .login_form .login_info .input {
+    width: 250px;
+    position: absolute;
+    top: 130px;
+    left: 150px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 15px;
+    color: white;
+}
+.contents-wrap .login_cover .login_form .login_info .input_pw {
+    top: 190px;
+}
+.contents-wrap .login_cover .login_form .login_info .input_name {
+    top: 250px;
+}
+.contents-wrap .login_cover .login_form .register_button {
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgb(189, 189, 189);
+    position: absolute;
+    top: 260px;
+    left: 800px;
+}
+.contents-wrap .login_cover .login_form .register_button p {
+    position: absolute;
+    top: -5px;
+    left: 12px;
+    font-size: 15px;
+    color: rgb(189, 189, 189);
+}
+.contents-wrap .login_cover .login_form .register_button img {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 20px;
+}
+.contents-wrap .bar_divide {
+    width: 2px;
+    height: 300px;
+    background-color: #b8b8b8;
+    position: absolute;
+    top: 150px;
+    left: 550px;
+}
+.contents-wrap .login_cover .license .subtitle {
+    position: absolute;
+    width: 300px;
+    top: 125px;
+    left: 600px;
+    font-size: 28px;
+    font-weight: 300;
+}
+.contents-wrap .login_cover .license .subtitle .bar_right_text {
+    width: 1px;
+    height: 23px;
+    background-color: #b8b8b8;
+    position: absolute;
+    top: 34px;
+    left: 230px;
+}
+.contents-wrap .login_cover .license .notice_license {
+    position: absolute;
+    width: 500px;
+    top: 230px;
+    left: 550px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 35px;
+}

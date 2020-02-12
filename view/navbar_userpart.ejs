@@ -1,0 +1,12 @@
+<ul class="navbar">
+    <% if (logined_cookie) {%>
+        <li><a href="/login">MY</a></li>
+        <li>|</li>
+        <a href="/"><div class="logo"></div></a>
+    <% } else {%>
+        <li><a href="/login">Login</a></li>
+        <li>|</li>
+        <li class="reg"><a href="/register">Register</a></li>
+        <a href="/"><div class="logo"></div></a>
+    <% } %>
+</ul>

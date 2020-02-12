@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="html">
+    <head>
+        <meta charset="utf-8">
+        <title><%= title%></title>
+        <link rel="stylesheet" href="./source/css/register_welcome.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="source/js/register_welcome.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="icon" type="image/png" href="./source/img/favicon.png"/>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <div class="main_text">
+                <p class="text_con_a">Thanks for join out service!</p>
+                <p class="text_con_b">Let us know about you in order to provide better service</p>
+            </div>
+            <div class="sel_a">
+                <p class="q_a">Q1. What is your job?</p>
+                <select class="job">
+                    <option value="e_p">Enterprise</option>
+                    <option value="p_p">Personal_profit</option>
+                    <option value="p_np">Personal_nonprofit</option>
+                    <option value="s">Student</option>
+                    <option value="t">Teacher</option>
+                </select>
+            </div>
+            <div class="sel_b">
+                <p class="q_b">Q2. How much do you using AFE / Premiere?</p>
+                <select class="do_well">
+                    <option value="pro">Professional</option>
+                    <option value="sem">Semipro</option>
+                    <option value="ama">Amateur</option>
+                </select>
+            </div>
+            <div class="fee_check">
+                <div class="text_box">
+                    <p class="main_text_fee">This is the fee that you have to pay. Check this out!</p>
+                </div>
+                <div class="fee_list">
+                    <div class="free_license">
+                        <p class="title_free">Free Using Area</p>
+                        <div class="bar bar_side_a"></div>
+                        <div class="bar bar_side_b"></div>
+                        <p class="free_using_times"><%= using_times%> times</p>
+                    </div>
+                    <div class="free_after">
+                        <p class="title_free">Essencial Using Fee</p>
+                        <div class="bar bar_side_a"></div>
+                        <div class="bar bar_side_b"></div>
+                        <p class="using_fee"><%= using_fee%>$ / 1 rendering</p>
+                        <p class="essencial_fee">(This is calculated if rendering is progressed in 1 hours. Fees could be changed)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button button_start_using"></div>
+        </div>
+        <!--footer -->
+    </body>
+</html>

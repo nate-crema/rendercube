@@ -1,0 +1,14 @@
+node_modules/
+
+
+# render_source_aep: download from Google Drive
+render_source_aep/
+
+# render_source_AME: download from Google Drive
+render_source_AME/
+
+# upload
+upload/*
+
+# upload_unzip
+upload_unzip/*

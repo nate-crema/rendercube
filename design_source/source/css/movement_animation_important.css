@@ -1,0 +1,139 @@
+@-webkit-keyframes GoRight {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+@keyframes GoRight {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+.GoRight {
+    -webkit-animation-name: GoRight;
+    animation-name: GoRight;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut_remain {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.duration_0_2s {
+    animation-duration: .2s;
+}
+.duration_0_4s {
+    animation-duration: .4s;
+}
+.duration_0_6s {
+    animation-duration: .6s;
+}
+.duration_0_8s {
+    animation-duration: .8s;
+}
+.duration_1s {
+    animation-duration: 1s;
+}
+.duration_1_2s {
+    animation-duration: 1.2s;
+}
+.duration_1_4s {
+    animation-duration: 1.4s;
+}
+.duration_1_6s {
+    animation-duration: 1.6s;
+}
+.duration_1_8s {
+    animation-duration: 1.8s;
+}
+.duration_2s {
+    animation-duration: 2s;
+}
+.duration_2_2s {
+    animation-duration: 2.2s;
+}
+.duration_2_4s {
+    animation-duration: 2.4s;
+}
+.duration_2_6s {
+    animation-duration: 2.6s;
+}
+.duration_2_8s {
+    animation-duration: 2.8s;
+}
+.duration_3s {
+    animation-duration: 3s;
+}

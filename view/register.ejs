@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="html">
+    <head>
+        <meta charset="utf-8">
+        <title><%= title%></title>
+        <link rel="stylesheet" href="./source/css/register.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="source/js/register.js"></script>
+        <link rel="icon" type="image/png" href="./source/img/favicon.png"/>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <% include ./navbar_userpart.ejs%>
+
+            <!-- Main Contents -->
+            <div class="login_cover fadeInUp fadein_0_5s">
+                <div class="login_bg">
+                    <div class="title_area">
+                        <p class="title_text fadeInDown fadein_1s">Register</p>
+                        <div class="bar bar_under_title"></div>
+                    </div>
+                    <div class="login_form">
+                        <form class="login_form_tag fadeIn fadein_2s" id="login_form_tag" method="post" action="/register">
+                            <div class="subtitle">
+                                <p class="subtitle_text">Service Register</p>
+                                <div class="bar bar_right_text"></div>
+                            </div>
+                            <div class="login_info">
+                                <p class="notice id">Email</p>
+                                <input type="email" class="input input_id input_email" id="email" name="email"/>
+                                <p class="notice pw">PW</p>
+                                <input type="password" class="input input_pw" id="pw" name="pw"/>
+                                <p class="notice name">NAME</p>
+                                <input type="text" class="input input_name" id="name" name="name"/>
+                            </div>
+                            <div class="register_button" id="login_button" onclick="register_check()" style="cursor: pointer;">
+                                <p>Register</p>
+                                <img src="source/img/arrow_point_white.png"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bar bar_divide fadeIn fadein_2s"></div>
+                    <div class="license fadeIn fadein_2s">
+                        <div class="subtitle">
+                            <p class="subtitle_text">License Selection</p>
+                            <div class="bar bar_right_text"></div>
+                        </div>
+                        <div class="notice_license">
+                            <p>Your License is ultimate<br> during alpha test period. <br> It changes to 'Free License' when service starts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

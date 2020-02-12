@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="html">
+    <head>
+        <!-- Google Site Tag-->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8109944362648958",
+            enable_page_level_ads: true
+          });
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135346125-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-135346125-1');
+        </script>
+
+        <!-- Google Site Tag-->
+
+
+        <meta charset="utf-8">
+        <title><%= title%></title>
+        <link rel="stylesheet" href="./source/css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="source/js/index.js"></script>
+        <link rel="icon" type="image/png" href="./source/img/favicon.png"/>
+    </head>
+    <body class="body">
+        <div class="contents-wrap">
+            <% include ./navbar.ejs %>
+            <!-- Slide - Dots ==> Always fixed position -->
+
+            <div class="dots_slide">
+                <div class="dots dot_a selected"></div>
+                <div class="dots dot_b"></div>
+                <div class="dots dot_c"></div>
+                <div class="dots dot_d"></div>
+            </div>
+
+            <!-- Main Contents -->
+
+            <div class="main-a">
+                <div class="main_text">
+                    <div class="sub_contents_main_text">
+                        <p class="sub_a fadeInLeft fadein_1s">
+                            Rendercube, Welcome
+                        </p>
+                        <div class="bar bar-under-a"></div>
+                    </div>
+                    <p class="main_title_text fadeInLeft fadein_1_3s">
+                        Begins of <br> Faster Rendering
+                    </p>
+                    <p class="main_sub_text fadeInLeft fadein_1_8s">
+                        Meet Alpha Service at April 5th.
+                    </p>
+                </div>
+                <video autoplay muted loop class="video_intro" width="600px">
+                    <source src="./source/img/intro.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="main-b">
+                <div class="main_text">
+                    <div class="sub_contents_main_text">
+                        <p class="sub_b fadeInLeft fadein_1s">
+                            Rendercube - Service Intro
+                        </p>
+                        <div class="bar bar-under-b"></div>
+                    </div>
+                    <p class="main_title_text special fadeInLeft fadein_1_3s">
+                        Rendercube,
+                    </p>
+                    <p class="main_title_text_b special fadeInLeft fadein_1_8s">
+                        Online Rendering Service
+                    </p>
+                </div>
+                <div class="buttons_div">
+                    <div class="button button_white btn_explain">
+                        <div class="subtitle">
+                            <p class="sub_text_btn">Rendercube Introduction</p>
+                            <div class="bar bar-button-d"></div>
+                        </div>
+                        <p class="main_text_btn">Rendering Process at Rendercube</p>
+                        <a href="/introduction#check_ext"><img src="./source/img/arrow_point_black.png"/></a>
+                    </div>
+                    <div class="button button_black btn_render_start" onclick="location.href='/start_rendering'">
+                        <div class="subtitle">
+                            <p class="sub_text_btn">Rendering Start</p>
+                            <div class="bar bar-button-d"></div>
+                        </div>
+                        <p class="main_text_btn button">Start Rendering (alpha)</p>
+                        <a href="/introduction#check_ext"><img src="./source/img/arrow_point_white.png"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-c">
+                <div class="main_text">
+                    <div class="sub_contents_main_text">
+                        <p class="sub_c fadeInLeft fadein_1s">
+                            Renderfarm, ways to earn money easily
+                        </p>
+                        <div class="bar bar-under-c"></div>
+                    </div>
+                    <p class="main_title_text fadeInLeft fadein_1_3s">
+                        Renderfarm,
+                    </p>
+                    <p class="main_title_text_b fadeInLeft fadein_1_8s">
+                        Rendering Host for Users
+                    </p>
+                    <p class="main_sub_text fadeInLeft fadein_1_8s">
+                        Meet Renderfarm at Beta Service
+                    </p>
+                </div>
+                <div class="buttons_div">
+                    <div class="button button_black btn_register_farm_start">
+                        <div class="subtitle">
+                            <p class="sub_text_btn">Renderfarm Register</p>
+                            <div class="bar bar-button-d"></div>
+                        </div>
+                        <p class="main_text_btn">Register your PC at<br>Renderfarm</p>
+                        <a href="/introduction#check_ext"><img src="./source/img/arrow_point_white.png"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-d">
+                <div class="main_text">
+                    <p class="main_title_text fadeInUp fadein_1s">
+                        Rendercube
+                    </p>
+                    <p class="main_title_text_b fadeInUp fadein_1_3s">
+                        Online Rendering Service
+                    </p>
+                </div>
+                <div class="buttons_div">
+                    <div class="button button_white btn_check_ext">
+                        <div class="subtitle">
+                            <p class="sub_text_btn">Rendercube Introduction</p>
+                            <div class="bar bar-button-d"></div>
+                        </div>
+                        <p class="main_text_btn">Check support extensions</p>
+                        <a href="/introduction#check_ext"><img src="./source/img/arrow_point_black.png"/></a>
+                    </div>
+                    <div class="button button_black btn_reserv_user"  onclick="location.href='/register'">
+                        <div class="subtitle">
+                            <p class="sub_text_btn">Rendercube Registration</p>
+                            <div class="bar bar-button-d"></div>
+                        </div>
+                        <p class="main_text_btn">Make a Using Reservation</p>
+                        <p class="main_text_btn_b">with benefits</p>
+                        <a href="/introduction#check_ext"><img src="./source/img/arrow_point_white.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer -->
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<ul class="navbar">
+    <% if (logined_cookie) {%>
+        <li><a href="/my">MY</a></li>
+        <li>|</li>
+        <li class="reg"><a href="/logout">Logout</a></li>
+        <li class="reg_renderfarm"><a href="/reg_renderfarm">Register Renderfarm</a></li>
+        <li class=""><a href="/start_rendering">Start Rendering</a></li>
+        <li class=""><a href="/about">About Rendercube</a></li>
+        <a href="/"><div class="logo"></ul></a>
+    <% } else {%>
+        <li><a href="/login">Login</a></li>
+        <li>|</li>
+        <li class="reg"><a href="/register">Register</a></li>
+        <li class="reg_renderfarm"><a href="/reg_renderfarm">Register Renderfarm</a></li>
+        <li class=""><a href="/start_rendering">Start Rendering</a></li>
+        <li class=""><a href="/about">About Rendercube</a></li>
+        <a href="/"><div class="logo"></ul></a>
+    <% } %>
+</ul>
