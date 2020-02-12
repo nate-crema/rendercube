@@ -1,0 +1,109 @@
+html {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+.hide {
+    display: none;
+    opacity: 0;
+}
+.contents-wrap {
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 3200px;
+}
+
+.contents-wrap .main {
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 700px;
+}
+.contents-wrap .main img {
+    width: 1100px;
+    position: absolute;
+    left: -100px;
+}
+.contents-wrap .main .contents {
+    position: absolute;
+    right: 500px;
+    top: 300px;
+}
+.contents-wrap .main .contents .bar_line_a {
+    position: absolute;
+    right: 00px;
+    width: 300px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: black;
+}
+.contents-wrap .main .contents .title {
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    right: -200px;
+    top: -50px;
+}
+.contents-wrap .main .contents .sub_contents {
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    width: 320px;
+    font-size: 15px;
+}
+.contents-wrap .main .contents .sub_contents .sub_title {
+    color: rgb(68, 68, 68);
+}
+.contents-wrap .main .contents .sub_contents .email_info_cover {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    font-size: 30px;
+    width: 800px;
+    height: auto;
+    color: black;
+}
+.contents-wrap .main .contents .sub_contents .email_info_cover .email_info {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+
+.contents-wrap .button_home {
+    position: absolute;
+    top: 300px;
+    left: -100px;
+    width: 300px;
+    height: 70px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+}
+.contents-wrap .button_home .bar-width {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    width: 100px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: white;
+}
+.contents-wrap .button_home .bar-height {
+    position: absolute;
+    top: 22px;
+    left: 150px;
+    width: 2px;
+    height: 30px;
+    border-radius: 1px;
+    background-color: white;
+}
+.contents-wrap .button_home p {
+    position: absolute;
+    top: 7px;
+    right: 50px;
+
+}

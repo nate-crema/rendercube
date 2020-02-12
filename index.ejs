@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title><%= title%></title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&amp;subset=korean" rel="stylesheet">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/index_animation.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="./js/index.js"></script>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <% include ./navbar.ejs %>
+            <div class="main-contents-wrap-a" id="home">
+                <div class="text_main">
+                    <p class="text_a fadeIn time_1_2s rem_ani delay_1_3s">온라인 렌더링의</p>
+                    <p class="text_b fadeIn time_1_8s rem_ani delay_1_3s">시작</p>
+                    <div class="bar bar_side_text_a fadeInRight time_1_2s rem_ani"></div>
+                </div>
+                <div class="text_sub">
+                    <div class="bar_side_text_b fadeInLeft time_1_2s rem_ani"></div>
+                    <p class="text_c fadeIn time_0_8s rem_ani delay_1s">4월말, 여러분과 시작합니다</p>
+                    <div onclick="location.href='/pre_register'" class="button_pre_subscribe fadeIn time_0_9s rem_ani delay_2s">
+                        <p class="text_subscribe">서비스 사전등록 하기</p>
+                        <img src="./img/arrow_point_black_right.svg"/>
+                    </div>
+                </div>
+                <img src="./img/page_a.svg" class="fadeIn time_1_5s"/>
+            </div>
+            <div class="main-contents-wrap-b" id="fast">
+                <div class="cover_b">
+                    <div class="text_main effect_text_main_b">
+                        <p class="text_a effect_text_a_b fadeInRight rem_ani time_1_5s fadeInRight rem_ani time_1_5s">시간을 아껴주는</p>
+                        <p class="text_b_a effect_text_b_b fadeInRight rem_ani time_1_5s">빠른</p>
+                        <p class="text_b_b effect_text_b_b fadeInRight rem_ani time_1_5s">렌더팜</p>
+                        <div class="bar bar_side_text_a fadeInRight time_0_2s rem_ani"></div>
+                    </div>
+                    <div class="text_sub">
+                        <div class="bar_side_text_b fadeInLeft time_1_2s rem_ani"></div>
+                        <p class="text_c fadeIn time_0_8s rem_ani delay_1s">4K  x 60fps x 30s 영상기준 테스트</p>
+                        <div class="compare_test fadeInDown time_1_3s rem_ani delay_1_1s">
+                            <p class="compare_a">Macbook Pro 15in. 2017</p>
+                            <div class="per_bar_a per_bar size_a time_1s rem_ani delay_1_3s"></div>
+                            <p class="compare_b">Rendercube 다중 분산 서버</p>
+                            <div class="per_bar_b per_bar size_b time_1s rem_ani delay_1_5s"></div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/page_b.svg"/>
+            </div>
+            <div class="main-contents-wrap-c" id="fee">
+                <div class="cover_c">
+                    <div class="text_main effect_text_main_c">
+                        <p class="text_a effect_text_a_c fadeInRight rem_ani time_1_5s fadeInRight rem_ani time_1_5s">렌더팜은 비싸다구요?</p>
+                        <p class="text_b_a effect_text_b_c fadeInRight rem_ani time_1_5s">무료</p>
+                        <p class="text_b_b effect_text_b_c fadeInRight rem_ani time_1_5s">는 어때요?</p>
+                        <div class="bar bar_side_text_a fadeInRight time_0_2s rem_ani"></div>
+                    </div>
+                    <div class="text_sub">
+                        <div class="bar_side_text_b fadeInLeft time_1_2s rem_ani"></div>
+                        <div class="text_c_cover">
+                            <p class="text_c text_c_a fadeIn time_0_8s rem_ani delay_1s">이용자 모두 
+                            <p class="text_c text_c_b fadeIn time_0_8s rem_ani delay_1s">3회 무료
+                            <p class="text_c text_c_c fadeIn time_0_8s rem_ani delay_1s">, 아래 조건 해당자는
+                            <p class="text_c text_c_d fadeIn time_0_8s rem_ani delay_1s">계속 무료!</p>
+                        </div>
+                        <div class="sub_contents">
+                            <p class="sub_con_a fadeInRight rem_ani time_1s delay_1s">+ <a href="#" onclick="not_read_school_free()">지정된 교육기관</a>에 속한 학생 및 교직원</p>
+                            <p class="sub_con_b fadeInRight rem_ani time_1s delay_1_1s">+ Renderline 서비스 이용자</p>
+                            <p class="sub_con_c fadeInRight rem_ani time_1s delay_1_2s">+ 기타 프로모션을 통해 라이센스 코드를 받은 이용자</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/page_c.svg"/>
+            </div>
+            <div class="main-contents-wrap-d" id="storage">
+                <div class="cover_d">
+                    <div class="text_main effect_text_main_d">
+                        <p class="text_a effect_text_a_d fadeInLeft rem_ani time_1_5s">영상은 여러분의 포트폴리오!</p>
+                        <p class="text_b effect_text_b_d fadeInLeft rem_ani time_1_5s delay_0_1s">많이 저장하세요!</p>
+                        <div class="bar bar_side_text_a fadeInRight time_0_2s rem_ani"></div>
+                    </div>
+                    <div class="text_sub">
+                        <div class="bar_side_text_b fadeInLeft time_1_2s rem_ani"></div>
+                        <div class="text_d_cover">
+                            <p class="text_d text_d_a fadeIn time_0_8s rem_ani delay_1s">이용자 모두 
+                            <p class="text_d text_d_b fadeIn time_0_8s rem_ani delay_1s">30GB 무료
+                            <p class="text_d text_d_c fadeIn time_0_8s rem_ani delay_1s">, 렌더링하면 편집/영상파일 모두 자동저장!</p>
+                        </div>
+                        <div class="sub_contents">
+                            <p class="sub_con_a fadeInLeft rem_ani time_1s delay_1s">+ 업로드된 편집파일은 유효기간없이 저장</p>
+                            <p class="sub_con_b fadeInLeft rem_ani time_1s delay_1_1s">+ 실수로 지웠다면 1주일동안 복원가능</p>
+                            <p class="sub_con_c fadeInLeft rem_ani time_1s delay_1_2s">+ 공유하고 싶다면 압축주소 혹은 QR(모바일 전용)을 찍어서 공유</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/page_d.svg"/>
+            </div>
+            <div class="footer">
+                <div class="top">
+                    <p class="text">Rendercube</p>
+                    <div class="bar bar-cross-footer"></div>
+                    <p class="subtitle">Online Rendering Service</p>
+                </div>
+                <ul class="menu_a">
+                    <li class="first">+ Help: </li>
+                    <li class="first_helper_a helper">Adobe Integration Engineering Manager, bbb_999 (nickname)</li>
+                    <li class="first_helper_b helper">Dongwhan , Jeon (KDMHS 16WP)</li>
+                    <li class="second">© Copyright Hwagyun Kim, KDMHS 17WP 2019</li>
+                </ul>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+.navbar {
+    list-style: none;
+    padding-top: 40px;
+    padding-right: 40px; 
+    z-index: 1;
+    height: 70px;
+}
+.navbar li {
+    float: right;
+    font-size: 20px;
+    padding-right: 35px;
+    font-weight: 300;
+    padding-top: 20px;
+    z-index: 50;
+    cursor: pointer;
+}
+.navbar a {
+    z-index: 0;
+}
+.navbar img {
+    width: 200px;
+    position: absolute;
+    left: 50px;
+    z-index: 0;
+}

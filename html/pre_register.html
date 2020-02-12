@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Rendercube - 사전등록</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&amp;subset=korean" rel="stylesheet">
+        <link rel="stylesheet" href="./source/css/pre_register.css">
+        <link rel="stylesheet" href="./source/css/index_animation.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="./source/js/login.js"></script>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <ul class="navbar">
+                <li class="login">로그인</li>
+                <li class="register">회원가입</li>
+                <img src="./source/img/logo.png"/>
+            </ul>
+            <div class="login_cover">
+                <form class="login_form" method="post" action="/login">
+                    <div class="title_area">
+                        <div class="bar bar-title fadeInRight time_1s"></div>
+                        <p class="title_text fadeInRight time_0_7s delay_0_3s rem_ani">사전등록</p>
+                    </div>
+                    <div class="login_box">
+                        <div class="id login_design">
+                            <p class="title_sub fadeIn time_0_8s rem_ani delay_0_4s">Email</p>
+                            <input type="text" class="input_id fadeIn time_0_8s rem_ani delay_0_5s" id="input_id" name="id"/>
+                        </div>
+                        <div class="pw login_design">
+                            <p class="title_sub fadeIn time_0_8s rem_ani delay_0_4s">PW</p>
+                            <input type="text" class="input_pw fadeIn time_0_8s rem_ani delay_0_5s" id="input_pw" name="pw"/>
+                        </div>
+                        <div class="login_button">
+                            <div class="bar bar-side-a fadeInLeft time_0_8s rem_ani delay_0_5s"></div> 
+                            <div class="bar bar-side-b fadeInUp time_0_8s rem_ani delay_0_7s"></div> 
+                            <p class="fadeInDown time_0_8s rem_ani delay_0_5s">등록하기</p>
+                        </div>
+                    </div>
+                </form>
+                <img src="./source/img/3_edited_man_only.svg"/>
+            </div>
+        </div>
+    </body>
+</html>

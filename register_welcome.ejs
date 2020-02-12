@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title><%= title%></title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&amp;subset=korean" rel="stylesheet">
+        <link rel="stylesheet" href="./css/register_welcome.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/index_animation.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="./js/register_welcome.js"></script>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <% include ./navbar.ejs %>
+            <div class="main">
+                <img src="./img/bird_grab.svg"/>
+                <span class="contents">
+                    <div class="bar bar_line_a fadeInRight time_1s"></div>
+                    <p class="title fadeInRight time_0_7s delay_0_3s rem_ani">사전등록 완료</p>
+                    <div class="sub_contents">
+                        <p class="sub_title fadeIn time_0_8s rem_ani delay_0_4s">아래의 정보로 사전등록이 완료되었습니다!</p>
+                        <div class="email_info_cover fadeIn time_0_8s rem_ani delay_0_4s">
+                            <p class="email_registered">email</p>
+                            <p class="email_info"><%= email%></p>                       
+                        </div>
+                    </div>
+                    <div class="button button_home fadeInRight time_1s rem_ani delay_0_2s" onclick="home_return()">
+                        <div class="bar bar-width"></div>
+                        <div class="bar bar-height"></div>
+                        <p>홈으로</p>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>

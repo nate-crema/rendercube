@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title><%= title%></title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&amp;subset=korean" rel="stylesheet">
+        <link rel="stylesheet" href="./css/pre_register.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="./css/index_animation.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="./js/pre_register.js"></script>
+    </head>
+    <body>
+        <div class="contents-wrap">
+            <% include ./navbar.ejs %>
+            <div class="login_cover">
+                <form class="login_form" id="login_form" method="post" action="/pre_register">
+                    <div class="title_area">
+                        <div class="bar bar-title fadeInRight time_1s"></div>
+                        <p class="title_text fadeInRight time_0_7s delay_0_3s rem_ani">사전등록</p>
+                    </div>
+                    <div class="login_box">
+                        <div class="id login_design">
+                            <p class="title_sub fadeIn time_0_8s rem_ani delay_0_4s">Email</p>
+                            <input type="email" class="input_email fadeIn time_0_8s rem_ani delay_0_5s" id="input_email" name="email"/>
+                        </div>
+                        <div class="pw login_design">
+                            <p class="title_sub fadeIn time_0_8s rem_ani delay_0_4s">PW</p>
+                            <input type="password" class="input_pw fadeIn time_0_8s rem_ani delay_0_5s" id="input_pw" name="pw"/>
+                        </div>
+                        <div class="login_button" onclick="send_register()">
+                            <div class="bar bar-side-a fadeInLeft time_0_8s rem_ani delay_0_5s"></div> 
+                            <div class="bar bar-side-b fadeInUp time_0_8s rem_ani delay_0_7s"></div> 
+                            <p class="fadeInDown time_0_8s rem_ani delay_0_5s">등록하기</p>
+                        </div>
+                    </div>
+                </form>
+                <img src="./img/3_edited_man_only.svg"/>
+            </div>
+        </div>
+    </body>
+</html>
