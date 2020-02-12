@@ -1,11 +1,15 @@
+
 node_modules/
 
-
 # render_source_aep: download from Google Drive
-render_source_aep/
+# Download Route: https://drive.google.com/file/d/16SuDhy2QS4YY704bEqdRI2gWoqKA9MRA/view?usp=sharing
+render_source_aep/*
+render_source_aep.zip
 
 # render_source_AME: download from Google Drive
-render_source_AME/
+# Download Route: https://drive.google.com/file/d/1Vgz3ctmnpcLyeoyaZe3SR0EJoNRX20aE/view?usp=sharing
+render_source_AME/*
+render_source_AME.zip
 
 # upload
 upload/*
