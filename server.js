@@ -12,7 +12,10 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 var port = 80;
-var ip = "localhost";
+var ip_local = "127.0.0.1";
+var ip_outward = "222.117.33.139";
+
+var ip = ip_outward;
 
 const server = app.listen(port, ip, function() {
     console.log(`
