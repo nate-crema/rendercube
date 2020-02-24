@@ -1,2 +1,4 @@
 node_modules_bef/
 node_modules/
+node/userdata/*
+test_data/*

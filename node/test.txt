@@ -1,0 +1,61 @@
+Report created: 
+	2019. 9. 3.	오후 10시 18분 8초 GMT+9
+
+Project name: 2018_9월모의_final.aep
+
+Source files collected to: 
+	/Users/kimgyun/Downloads/2018_9월모의_final folder
+
+Source files collected: For all comps
+
+Collected comps:  
+	Comp 1
+	intro
+	nameTag
+	outro
+	outro-spetial
+	transition
+	최종(전환효과O)
+	
+Number of collected files:  5
+
+Size of collected files:  635 MB
+
+Collected source files: 
+	/Users/kimgyun/Downloads/최종(전환효과X).mp4
+	/Users/kimgyun/OneDrive/영상편집/dimiu&i 메인 영상소스/(Footage)/background.png
+	/Users/kimgyun/OneDrive/영상편집/dimiu&i 메인 영상소스/(Footage)/In_Albany_New_York.mp3
+	/Users/kimgyun/OneDrive/영상편집/dimiu&i 메인 영상소스/(Footage)/intro.wav
+	/Users/kimgyun/OneDrive/영상편집/dimiu&i 메인 영상소스/(Footage)/logo-vertical.ai
+	
+Number of missing items:  2
+
+Rendering plug-ins:
+	CINEMA 4D
+	Classic 3D
+	
+Effects used:  9
+
+Effect:  Angle Control
+	
+Effect:  Block Dissolve
+	
+Effect:  CC Image Wipe
+	
+Effect:  CC Radial ScaleWipe
+	
+Effect:  Drop Shadow
+	
+Effect:  Fill
+	
+Effect:  Point Control
+	
+Effect:  Radial Wipe
+	
+Effect:  Slider Control
+	
+
+Layer:  Text Layer
+	External dependencies:  
+		Font family: “BM JUA_OTF”, Font style: “Regular”
+
