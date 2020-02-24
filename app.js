@@ -15,7 +15,8 @@ var port = 80;
 var ip = "127.0.0.1";
 var ip_outward = "222.117.33.139";
 
-var ip = ip_outward;
+console.log(process.env.IP);
+var ip = process.env.IP || ip_outward;
 
 const server = app.listen(port, ip, function() {
     console.log(`
@@ -68,7 +69,7 @@ db.once('open', function(){
 //     dbName: 'Rendercube'
 // });
 
-mongoose.connect('mongodb://175.116.44.231:754', { dbName: 'Rendercube'});
+mongoose.connect('mongodb://localhost', { dbName: 'Rendercube'});
 
 // mongoose.connect('mongodb://rendercube.kr:944');
 
