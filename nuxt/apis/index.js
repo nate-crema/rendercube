@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import axios from 'axios';
+import async from 'async';
 
 // Create express router
 const router = express.Router()
@@ -19,77 +20,134 @@ router.use((req, res, next) => {
 // Server Link
 
 const server_link = "http://localhost:80";
+const back_server_link = "http://211.252.25.131:2766";
 
 // Add POST - /api/login
 router.post('/login', (req, res) => {
+  console.log("requested");
 
-    console.log(req.body);
+  async.waterfall([
+    (callback) => {
+      console.log(back_server_link + '/load/user');
+      axios.post(back_server_link + '/load/user', {
+        id: req.body.id,
+        pw: req.body.pw
+      })
+      .then((response) => {
+        callback(null, response);
+      })
+      .catch((e) => {
+        callback(e);
+      })
+    }
+  ], (err, result) => {
+    if (err) console.error(err);
+    if (result.data.result == true) {
+      console.log(`
+      --|login confirm|--
 
-    // if (req.body.id === 'test' && req.body.pw === 'test') {
-    //     var set_sessions = req.session.loginInfo;
+      id: ` + req.body.id + `
+      username: ` + result.data.user_data.username + `
+
+      `);
+
+      req.session.loginInfo = {
+        id: req.body.id,
+        username: result.data.user_data.username,
+        license: result.data.user_data.license,
+        cl_id: result.data.user_data.cl_id
+      }
+
+      console.log(req.session.loginInfo);
+
+      res.setHeader("Content-Type", "application/json");
+
+      res.json({
+        result: "success",
+        enc_session: req.body.id
+      });
+
+    } else {
+      console.log(`
+      --|login failed|--
+
+      id: ` + req.body.id + `
+      
+      `)
+
+      res.json({
+        result: "failed"
+      })
+    }
+  })
+
+    // console.log(req.body);
+
+    // // if (req.body.id === 'test' && req.body.pw === 'test') {
+    // //     var set_sessions = req.session.loginInfo;
         
-    //     set_sessions.loginInfo_enc = 'test';
-    //     set_sessions.id = 'test';
-    //     set_sessions.username = 'tester';
-    //     set_sessions.license = 'test_license';
-    //     set_sessions.cl_id = '0000'
+    // //     set_sessions.loginInfo_enc = 'test';
+    // //     set_sessions.id = 'test';
+    // //     set_sessions.username = 'tester';
+    // //     set_sessions.license = 'test_license';
+    // //     set_sessions.cl_id = '0000'
+
+    // //     res.setHeader("Content-Type", "application/json");
+
+    // //     return res.json({ 
+    // //         login: true,
+    // //         enc_session: 'test'
+    // //     })
+    // // } else {
+    // //   res.status(401).json({ message: 'Bad credentials' })
+    // // }
+
+    // // load user info at mongo database
+
+    // axios.post(server_link + '/load/user', {
+    //   id: req.body.id,
+    //   pw: req.body.pw
+    // })
+    // .then(function(response) {
+    //   if (response.data.result == true) {
+    //     console.log(`
+    //     --|login confirm|--
+
+    //     id: ` + req.body.id + `
+    //     username: ` + response.data.user_data.username + `
+
+    //     `);
+
+    //     req.session.loginInfo = {
+    //       id: req.body.id,
+    //       username: response.data.user_data.username,
+    //       license: response.data.user_data.license,
+    //       cl_id: response.data.user_data.cl_id
+    //     }
+
+    //     console.log(req.session.loginInfo);
 
     //     res.setHeader("Content-Type", "application/json");
 
-    //     return res.json({ 
-    //         login: true,
-    //         enc_session: 'test'
+    //     res.json({
+    //       result: "success",
+    //       enc_session: req.body.id
+    //     });
+
+        
+    //   } else {
+    //     console.log(`
+    //     --|login failed|--
+
+    //     id: ` + req.body.id + `
+        
+    //     `)
+
+    //     res.json({
+    //       result: "failed"
     //     })
-    // } else {
-    //   res.status(401).json({ message: 'Bad credentials' })
-    // }
-
-    // load user info at mongo database
-
-    axios.post(server_link + '/load/user', {
-      id: req.body.id,
-      pw: req.body.pw
-    })
-    .then(function(response) {
-      if (response.data.result == true) {
-        console.log(`
-        --|login confirm|--
-
-        id: ` + req.body.id + `
-        username: ` + response.data.user_data.username + `
-
-        `);
-
-        req.session.loginInfo = {
-          id: req.body.id,
-          username: response.data.user_data.username,
-          license: response.data.user_data.license,
-          cl_id: response.data.user_data.cl_id
-        }
-
-        console.log(req.session.loginInfo);
-
-        res.setHeader("Content-Type", "application/json");
-
-        res.json({
-          result: "success",
-          enc_session: req.body.id
-        });
-
-        
-      } else {
-        console.log(`
-        --|login failed|--
-
-        id: ` + req.body.id + `
-        
-        `)
-
-        res.json({
-          result: "failed"
-        })
-      }
-    })
+    //   }
+    // })
 
     // if (req.body.id == 'test' && req.body.pw == 'test') {
       

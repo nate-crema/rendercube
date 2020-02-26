@@ -21,7 +21,7 @@ module.exports = {
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js' },
       { src: 'https://unpkg.com/axios/dist/axios.min.js' },
       { src: 'https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js' },
-      { src: 'http://localhost:225/socket.io/socket.io.js' }
+      { src: 'http://' + (process.env.HOST || process.env.IP || "localhost") + ':225/socket.io/socket.io.js' }
     ],
     css: [
       // node.js 모듈을 로드

@@ -301,13 +301,17 @@ export const actions = {
             //     }
             // })
 
-            const { data } = await axios.post('/api/login', { id, pw })
-            const data_stringified = JSON.stringify(data);
-            console.log('data: '+ data_stringified);
-            commit('LOGIN', data_stringified.enc_session);
-            console.log("login - commited");
-            commit('SET_USER', data_stringified);
-            console.log("set_user - commited");
+            // console.log((!process.env.IP ? "" : "http://" + process.env.ip) + '/api/login');
+            // console.log("request start");
+            axios.post((!process.env.IP ? "" : "http://" + process.env.ip + ":" + process.env.port) + '/api/login', { id, pw })
+            .then(({data}) => {
+                const data_stringified = JSON.stringify(data);
+                console.log('data: '+ data_stringified);
+                commit('LOGIN', data_stringified.enc_session);
+                console.log("login - commited");
+                commit('SET_USER', data_stringified);
+                console.log("set_user - commited");
+            })
 
         } catch (e) {
             if (e.response && e.response.status === 401) {

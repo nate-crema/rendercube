@@ -503,8 +503,8 @@ export default {
 
         // // writing new: 20190825
 
-        var back_server_link = "http://localhost:80";
-        var front_server_link = "http://localhost:3000";
+        var back_server_link = "http://211.252.25.131:2766";
+        var front_server_link = "http://211.252.25.131:80";
 
         var uploadPercentage = this.$data.uploadPercentage;
 
@@ -657,7 +657,8 @@ export default {
                 // document.getElementsByClassName('big_exp_title_upload_zip')[0].innerHTML = "파일을 압축해제하는 중입니다.";
                 // document.getElementsByClassName('small_exp_title_upload_zip')[0].innerHTML = "절대 페이지에서 나가지 마세요.";
 
-                let unzip_server = 'http://localhost:225';
+                let unzip_server = 'http://211.252.25.131:225';
+                console.log(unzip_server);
                 
                 // unzip command send
 

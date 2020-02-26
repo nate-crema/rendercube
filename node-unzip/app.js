@@ -20,9 +20,12 @@ const getIP = require('ipware')().get_ip;
 const server =  http.createServer(app);
 const io = require('socket.io')(server);
 
-server.listen(225, function() {
-    console.log("Rendercube UNZIP server started: 225");
-})
+const port = process.env.PORT || 225;
+const ip = process.env.IP || "127.0.0.1";
+
+server.listen(port, ip, function() {
+    console.log("Rendercube UNZIP server started: http://" + ip + ":" + port);
+});
 
 
 // time definition
@@ -69,4 +72,4 @@ app.use(session({
     }
 }));
 
-const router = require('./router')(io, app, fs, path, multer, time, getIP, axios, AdmZip, iconv);
+const router = require('./router')(io, app, fs, path, multer, time, getIP, axios, AdmZip, iconv, ip);

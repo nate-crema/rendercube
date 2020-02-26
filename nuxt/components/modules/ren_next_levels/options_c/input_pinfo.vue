@@ -546,7 +546,7 @@ export default {
         }    
 
         // send data
-        var back_server_link = "http://localhost:80";
+        var back_server_link = "http://" + (location.host || "localhost") + ":2766";
         const result = await axios.post(back_server_link + '/rendering/infos', formData);
 
         console.log(result);

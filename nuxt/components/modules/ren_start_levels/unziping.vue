@@ -29,7 +29,9 @@ export default {
         console.log(ren_id);
         const id = req_b.data.id;
         
-        const server_socketio = "http://localhost:225";
+        const server_socketio = "http://" + location.host + ":225";
+        console.log(process.env);
+        console.log(server_socketio);
         const socket = io.connect(server_socketio + "/stat_zip");
 
         socket.on('unzipped_' + ren_id, async function(data) {
@@ -41,7 +43,7 @@ export default {
 
                 alert("압축 해제가 완료되었습니다!");
 
-                const local_server = "http://localhost:3000/api";
+                const local_server = "http://" + (location.host || "localhost") + ":" + (process.env.PORT || "80") + "/api";
 
                 // set vuex - stage
         

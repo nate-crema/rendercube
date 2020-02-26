@@ -14,8 +14,11 @@ const getIP = require('ipware')().get_ip;
 
 // create server
 
-const server = app.listen(80, function() {
-    console.log("Test server started: 80");
+const port = process.env.port || 2766;
+const ip = process.env.IP || "127.0.0.1";
+
+const server = app.listen(port, ip, function() {
+    console.log("Test server started: " + port);
 })
 
 
@@ -77,6 +80,6 @@ mongo_db.once('open', function(){
     console.log("Connected to mongod server: rendercube");
 });
 
-mongoose.connect('mongodb://localhost/rendercube', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:554/rendercube', { useNewUrlParser: true });
 
 const router = require('./router')(app, fs, path, multer, time, mongoose, User_model, Rinfo_model, getIP, axios);

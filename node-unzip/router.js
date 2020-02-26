@@ -1,9 +1,12 @@
-module.exports = function(io, app, fs, path, multer, time, getIP, axios, AdmZip, iconv) {
+module.exports = function(io, app, fs, path, multer, time, getIP, axios, AdmZip, iconv, ip) {
+
+    const ipModule = require("ip");
 
     // socket.io method
     const status_zip = io.of('/stat_zip')
     status_zip.on('connection', function(socket) {
         console.log("Rendercube Socket.IO Server Connected!");
+        console.log("This server's ip is: " + ip);
         // socket.on('unzip_end', function(data) {
         //     const id = data.id;
         //     const ren_id = data.ren_id;
@@ -39,6 +42,10 @@ module.exports = function(io, app, fs, path, multer, time, getIP, axios, AdmZip,
 
         console.log("server accessed - unzip method load");
         console.log("Standby: 2500");
+
+        const data_analysis_route = 'http://' + ip + ':225/data/analyze';
+        console.log("Data analysis route: " + data_analysis_route);
+
         setTimeout(() => {
             // const iconv = require('iconv-lite');
             // const method2String = {
@@ -111,6 +118,7 @@ module.exports = function(io, app, fs, path, multer, time, getIP, axios, AdmZip,
             // change directory name
             
             console.log("Unzip Complete!");
+            console.log("This server's ip is: " + ip);
 
             const unzip_finish_route = unzip_saveroute + "(finish)"
 
@@ -123,7 +131,7 @@ module.exports = function(io, app, fs, path, multer, time, getIP, axios, AdmZip,
 
             // analyze project
 
-            axios.post('http://localhost:225/data/analyze', {
+            axios.post(data_analysis_route, {
                 filename_zip,
                 unzip_finish_route
             })
@@ -167,17 +175,24 @@ module.exports = function(io, app, fs, path, multer, time, getIP, axios, AdmZip,
         const zipname_noext = filename_zip.replace(zipname_addpart, '');
 
         const report_name = zipname_noext.replace(" folder", "Report.txt");
-        
-        const data = fs.readFileSync(path.join(unzip_finish_route, zipname_noext, report_name)).toString();
-        res.end(data);
+        // console.log("\n\n\n\n\n\n\n\n\n" + path.join(unzip_finish_route, zipname_noext));
 
+        fs.readdir(path.join(unzip_finish_route, zipname_noext), (err, files) => {
+            if (err) console.error(err);
+            const reportFilter = files.filter(file => {
+                console.log(file.includes("Report"));
+                return file.includes("Report.txt");
+            });
+            const data = fs.readFileSync(path.join(unzip_finish_route, zipname_noext, reportFilter[0])).toString();
+            res.end(data);
+        });
     });
 
     app.post('/data/analyze', async function(req, res) {
         const filename_zip = req.body.filename_zip;
         const unzip_finish_route = req.body.unzip_finish_route;
 
-        const res_load = await axios.post('http://localhost:225/data/load', {
+        const res_load = await axios.post('http://' + ip + ':225/data/load', {
             filename_zip: filename_zip,
             unzip_finish_route: unzip_finish_route
         });
